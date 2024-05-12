@@ -50,6 +50,8 @@
     <junit-jupiter.version>5.10.2</junit-jupiter.version>
     <mockito.version>5.12.0</mockito.version>
     <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+    <!-- core logic -->
+    <xauth-core.version>0.1.4</xauth-core.version>
   </properties>
 
   <dependencies>
@@ -62,6 +64,12 @@
           <artifactId>spring-boot-starter-logging</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>eu.xauth</groupId>
+      <artifactId>xauth-core</artifactId>
+      <version>${xauth-core.version}</version>
     </dependency>
 
     <dependency>
