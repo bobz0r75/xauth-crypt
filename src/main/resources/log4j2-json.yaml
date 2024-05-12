@@ -1,0 +1,27 @@
+---
+Configuration:
+  name: JSON_Logging
+  Appenders:
+    Console:
+      name: JSON_Appender
+      target: SYSTEM_OUT
+      JsonTemplateLayout:
+        charset: UTF-8
+        locationInfoEnabled: true
+        eventTemplateUri: classpath:EcsLayout.json
+        maxStringLength: 65536
+        eventTemplateAdditionalField:
+          - key: application
+            value: xauth-crypt
+  Loggers:
+    Logger:
+      - name: eu.xauth
+        level: debug
+        additivity: false
+        AppenderRef:
+          - ref: JSON_Appender
+    Root:
+      level: warn
+      AppenderRef:
+        - ref: JSON_Appender
+...

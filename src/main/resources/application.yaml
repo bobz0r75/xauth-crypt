@@ -1,0 +1,7 @@
+---
+spring:
+  application:
+    name: "xauth-crypt"
+
+logging:
+  config: classpath:log4j2.yaml
